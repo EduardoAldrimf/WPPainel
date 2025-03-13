@@ -22,11 +22,6 @@
 
 <script>
 import Options from "./settings/Options.vue";
-import Webhook from "./settings/Webhook.vue";
-import Websocket from "./settings/Websocket.vue";
-import Rabbitmq from "./settings/Rabbitmq.vue";
-import Chatwoot from "./settings/Chatwoot.vue";
-import Typebot from "./settings/Typebot.vue";
 
 import OpenSendMessage from "./message/OpenSendMessage.vue";
 import MyGroups from "./message/MyGroups.vue";
@@ -41,11 +36,6 @@ import ProfilePhoto from "./profile/ProfilePhoto.vue";
 export default {
   components: {
     Options,
-    Webhook,
-    Websocket,
-    Rabbitmq,
-    Chatwoot,
-    Typebot,
     OpenSendMessage,
     MyGroups,
     MyChats,
@@ -62,14 +52,7 @@ export default {
       {
         id: "settings",
         icon: "mdi-cog",
-        components: [
-          "Options",
-          "Webhook",
-          "Websocket",
-          "Rabbitmq",
-          "Chatwoot",
-          "Typebot",
-        ],
+        components: ["Options"],
       },
       {
         id: "message",
@@ -85,12 +68,7 @@ export default {
       {
         id: "profile",
         icon: "mdi-account",
-        components: [
-          "ConnectionAlert",
-          "BasicInfo",
-          "ProfilePhoto",
-          "Privacy",
-        ],
+        components: ["ConnectionAlert", "BasicInfo", "ProfilePhoto", "Privacy"],
       },
     ],
   }),

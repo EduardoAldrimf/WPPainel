@@ -55,7 +55,7 @@
               variant="outlined"
               size="x-small"
             >
-              {{$t("all")}}
+              {{ $t("all") }}
             </v-btn>
             <v-btn
               v-for="[key, item] in Object.entries(statusMapper)"
@@ -67,7 +67,7 @@
               variant="outlined"
               size="x-small"
             >
-            {{ $t(`status.${key}`) }}
+              {{ $t(`status.${key}`) }}
             </v-btn>
           </v-btn-toggle>
         </div>
@@ -111,19 +111,7 @@
                 </v-chip>
                 <h5>{{ instance.instanceName }}</h5>
               </div>
-              <div class="ml-auto flex-shrink-0">
-                <v-btn
-                  :disabled="loading || !!loadingDelete"
-                  :loading="loadingDelete === instance.instanceName"
-                  @click.stop="deleteInstance(instance.instanceName)"
-                  icon
-                  variant="tonal"
-                  color="error"
-                  size="x-small"
-                >
-                  <v-icon>mdi-delete</v-icon>
-                </v-btn>
-              </div>
+              <div class="ml-auto flex-shrink-0"></div>
             </div>
           </v-card>
         </v-col>
